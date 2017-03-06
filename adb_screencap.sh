@@ -28,9 +28,9 @@ if [[ $CUR_DIR == *"challenges"* ]] || [[ $CUR_DIR == *"testing"* ]];then
         if [[ $i == *"challenges"* ]] || [[ $i == *"testing"* ]];then
             flag=1
             if [[ $i == *"challenges"* ]];then
-                OUTPUT="/home/$USER/Documents/challenges"
+                OUTPUT="/home/$USER/Documents/challenges" #This is my root directory if I am doing a challenge
             else
-                OUTPUT="/home/$USER/Documents/testing"
+                OUTPUT="/home/$USER/Documents/testing"#This is my root directory if I am on a job. 
             fi
         fi
     done
