@@ -21,3 +21,5 @@ The script will search by default for `http:// ` links since it is something you
 ![search_strings_file run](screenshots/search_strings_sample_run.png)
 ## adb_screencap.sh
 This is a simple script that takes a screenshot of the screen currently displayed on the phone. It stores the screen on the screenshot directory of the Project. To use, please modify it and add your root directories. 
+## sign_apk.sh
+Small wrapper script used to sign an apk so it is possible to install it on an Android device, after patching it. It requires [sign.jar](https://github.com/appium/sign) to be in the `/usr/local/bin` directory.
