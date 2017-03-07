@@ -28,7 +28,7 @@ for WORD; do
                  exit 1
                 fi ;;
             -c) CONFIG=$2
-                shift 2
+                shift 2 
                  ;;
             -h)  print_usage
                  exit 0
@@ -73,9 +73,9 @@ while IFS= read -r var
 do
     if [[ $var ==  "key" ]];then
         key_words=$(grep --color=always --include="*.java" -irn 'key' $TARGETDIR /dev/null)
-        key_words="$key_words\n$(grep --color=always --include="*.xml" -irn 'key' $TARGETDIR /dev/null)"
+        key_words="$key_words$(grep --color=always --include="*.xml" -irn 'key' $TARGETDIR /dev/null)"
         echo -e "\n[${green}+${normal}] Lines containg keyword: \"${green}key${normal}\" (excluding keywords \"KeyEvent\" \"keyEvent\" \"containsKey\" \"keyDispatcherState\" \"OnKeyListener\" \"getKey()\" \"keySet()\" \"java.security.KeyStore\").\n"
-        echo -en "${yellow}--------------------------------------------------------------------------------------------------------------------------------------------------------------${normal}\n"
+        echo -en "${yellow}--------------------------------------------------------------------------------------------------------------------------------------------------------------${normal}"
         while read -r line; do
             if [[ "$(echo $line | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g")" != *"KeyEvent"* ]] && [[ "$(echo $line | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g")" != *"keyEvent"* ]]\
             && [[ "$(echo $line | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g")" != *"containsKey"* ]] && [[ "$(echo $line | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g")" != *"keyDispatcherState"* ]]\
@@ -89,9 +89,9 @@ do
         done <<< "$key_words"
     else
         key_words=$(grep --color=always --include="*.java" -irn "$var" $TARGETDIR /dev/null)
-        key_words="$key_words\n$(grep --color=always --include="*.xml" -irn "$var" $TARGETDIR /dev/null)"
+        key_words="$key_words$(grep --color=always --include="*.xml" -irn "$var" $TARGETDIR /dev/null)"
         echo -e "\n[${green}+${normal}] Lines containg keyword: \"${green}$var${normal}\"."
-        echo -en "${yellow}--------------------------------------------------------------------------------------------------------------------------------------------------------------${normal}\n"
+        echo -en "${yellow}--------------------------------------------------------------------------------------------------------------------------------------------------------------${normal}"
         while read -r line; do
             echo "$line"
         done <<< "$key_words"
