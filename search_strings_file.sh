@@ -27,8 +27,8 @@ for WORD; do
                  print_usage
                  exit 1
                 fi ;;
-            -c)  CONFIG=$2
-                 exit 0
+            -c) CONFIG=$2
+                shift 2
                  ;;
             -h)  print_usage
                  exit 0
