@@ -10,6 +10,7 @@ A bash script that
 OPTIONAL
 * [adb](https://developer.android.com/studio/command-line/adb.html) Required to install application on connected device.
 ### Usage
+`apk_prepera.sh apk_prepare -f <target.apk> [-o <output folder>]`
 
 ## adb_screencap.sh
 This is a simple script that takes a screenshot of the screen currently displayed on the phone. It stores the screen on the screenshot directory of the Project. To use, please modify it and add your root directories. 
