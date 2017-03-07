@@ -4,7 +4,7 @@ This is a collection of script I created in order to automate certain tideious a
 ### Requirements
 * [apktool](https://ibotpeaches.github.io/Apktool/install/)
 * [d2j-jar2dex.sh](https://github.com/ufologist/onekey-decompile-apk/blob/master/onekey-decompile-apk/_tools/dex2jar/d2j-jar2dex.sh) as d2j-jar2dex, simply create symbolic link `ln d2j-jar2dex.sh d2j-jar2dex` inside PATH
-* [/d2j-dex2jar.sh](https://github.com/ufologist/onekey-decompile-apk/blob/master/onekey-decompile-apk/_tools/dex2jar/d2j-dex2jar.sh) same as above
+* [d2j-dex2jar.sh](https://github.com/ufologist/onekey-decompile-apk/blob/master/onekey-decompile-apk/_tools/dex2jar/d2j-dex2jar.sh) same as above
 * [jadx](https://github.com/skylot/jadx#building-from-source)
 OPTIONAL
 * [adb](https://developer.android.com/studio/command-line/adb.html) Required to install application on connected device.
