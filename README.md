@@ -1,7 +1,7 @@
 # Android-Automation
 This is a collection of script I created in order to automate certain tideious and time consuming tasks performed during a Android Penetration Assessment. A description of each script follows.
 ## apk_prepare.sh
-A bash script that 
+A bash script that decompiles the apk, producing both the source in Java and the smali. The files are aranged neatly in a simple folder structure. The script also attempts to install the application on the device. The boring stuff is over! Happy hacking. 
 ### Requirements
 * [apktool](https://ibotpeaches.github.io/Apktool/install/)
 * [d2j-jar2dex.sh](https://github.com/ufologist/onekey-decompile-apk/blob/master/onekey-decompile-apk/_tools/dex2jar/d2j-jar2dex.sh) as d2j-jar2dex, simply create symbolic link `ln d2j-jar2dex.sh d2j-jar2dex` inside PATH
