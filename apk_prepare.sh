@@ -143,6 +143,8 @@ rm -rf  $FILENAME-jar2dex-dex2jar.jar $FILENAME-jar2dex.dex
 #Install APK
 echo -e "[$blue+$normal] Attempting to install apk to device."
 installed=0
+echo -e "[$blue+$normal] Starting adb-server."
+adb start-server 2>&1 >/dev/null
 if [[ $(adb devices) == "List of devices attached" ]];then
     print_both_sides "[$yellow+$normal] No device is attached. Will terminate without ." "[${yellow}WARNING$normal]"
 else
