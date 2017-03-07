@@ -16,7 +16,8 @@ elif [[ "$ERROR" == *"Connection reset"* ]];then
     else
         adb shell am start -a android.intent.action.MAIN -n com.mwr.dz/.activities.MainActivity > /dev/null 2>&1
         if [[ -z $(adb shell dumpsys power | grep mHoldingDisplaySuspendBlocker=true) ]];then
-            /home/apg/.scripts/unlock_phone.sh
+            echo -e "[+] Unlock Phone and try again"
+            exit 1
         fi
         adb shell input tap 922 1730
         adb shell input keyevent 4
