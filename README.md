@@ -16,6 +16,8 @@ OPTIONAL
 ![apk_repare sample run](screenshots/apk_prepare-screenshot.png)
 ![apk_repare sample run](screenshots/apk_prepare_tree.png)
 ## search_strings_file.sh
-A bash script used for static analysis on the applications source. It searches for strings, as provided by the configuration file. 
+A bash script used for static analysis on the applications source. It searches for strings, as provided by the configuration file. The default configuration file is at the script's base directory, named `..search_strings_config`.
+The script will search by default for `http:// ` links since it is something you should be looking for anyway _see [MiM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)_. The script also attempts to get rid some of the riffraff when searching for the string `key`.
+![search_strings_file run](screenshots/search_strings_sample_run.png)
 ## adb_screencap.sh
 This is a simple script that takes a screenshot of the screen currently displayed on the phone. It stores the screen on the screenshot directory of the Project. To use, please modify it and add your root directories. 
