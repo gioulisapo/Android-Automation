@@ -23,3 +23,5 @@ The script will search by default for `http:// ` links since it is something you
 This is a simple script that takes a screenshot of the screen currently displayed on the phone. It stores the screen on the screenshot directory of the Project. To use, please modify it and add your root directories. 
 ## sign_apk.sh
 Small wrapper script used to sign an apk so it is possible to install it on an Android device, after patching it. It requires [sign.jar](https://github.com/appium/sign) to be in the `/usr/local/bin` directory.
+## drozer_start.sh
+Small wrapper for MWR's [drozer](https://labs.mwrinfosecurity.com/tools/drozer/). It initiates drozer on the terminal and it starts the drozer server on the phone, 
